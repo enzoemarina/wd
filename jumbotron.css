@@ -1,0 +1,242 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding:30px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.jumbotron{
+  background-image: linear-gradient(to right bottom, rgba(228, 171, 80, 0.61),
+    rgba(153, 63, 5, 0.8)),url(./em1.jpg);
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+  padding: 30px;
+  position: relative;
+}
+
+.full-md{
+  background-size: cover;
+  background-image: url(./heart.jpg)
+  background-position: center;
+
+}
+
+.bigger-p{
+  font-size: 1.3rem; 
+}
+.center-margin{
+  margin-top: 15rem;
+}
+
+.img-gr{
+  background-size: cover;
+}
+.second{
+  min-height: 500px;
+}
+AIzaSyBNF6piJ4uD44bB20qgJt2241lBlzqJCqI
+
+.container-full {
+  margin: 0 auto;
+  padding: 0px;
+  width: 100%;
+}
+
+.container-fluid{
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 30px;
+}
+
+.party{
+  padding-top: 50px;
+}
+
+.circleImg{
+  border-radius: 50%;
+}
+
+.red{
+  background-color: #E0E0E0;
+  width: 100%
+}
+
+.r{
+  padding-left: 5%;
+  padding-top: 20px;
+}
+
+.l{
+  padding-right: 5%;
+  padding-top: 20px;
+}
+
+.c{
+  width: 60%;
+  height:60%;
+}
+
+p, h2{
+  text-align: center;
+  vertical-align: middle;
+}
+
+.text-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  text-align: center;
+}
+
+.heading-primary{
+  color: #FFFFFF;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 60px;
+
+}
+
+.heading-primary-main{
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 20px;
+  animation: moveInLeft 1s ease-out;
+}
+
+.heading-primary-sub{
+  display: block;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 17px;
+  padding-top: 5px;
+  animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+  0%{
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80%{
+    transform: translateX(10px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0%{
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80%{
+    transform: translateX(-10px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.btn:link,
+.btn:visited{
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+}
+
+.btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active{
+  transform: translateY(-1px);
+}
+
+.btn-white{
+  background-color: #FFFFFF;
+  color: #777777;
+}
+
+.btn::after{
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after{
+  background-color: white;
+}
+
+.btn:hover::after{
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
